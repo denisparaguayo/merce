@@ -229,75 +229,6 @@
       <div class="status-grid" id="statusGrid"></div>
     </section>
 
-    <!-- Section: Galería de Momentos & Recuerdos -->
-    <section class="section" id="momentos">
-      <div class="section-header">
-        <span class="section-tag">Cápsula del Tiempo</span>
-        <h2 class="section-title">Momentos que <span class="serif-italic">sacaron sonrisas</span></h2>
-        <p class="section-subtitle">Pequeñas historias, grandes detalles y recuerdos de estos meses.</p>
-      </div>
-
-      <div class="gallery-grid">
-        <!-- Item 1: Flores Cumpleaños -->
-        <article class="gallery-card">
-          <div class="image-wrapper">
-            <img src="IMG-20260909-WA0004.jpg" alt="Ramo de rosas de cumpleaños con Ferrero Rocher" loading="lazy">
-            <div class="image-overlay">
-              <span class="overlay-badge">09 de Septiembre</span>
-              <button class="zoom-btn" data-img="IMG-20260909-WA0004.jpg"
-                data-caption="Vi en tu estado que era tu cumple y te mandé este detalle sorpresa. Porque te merecías flores y bombones ese día.">Ver
-                Completa</button>
-            </div>
-          </div>
-          <div class="card-caption">
-            <h3>Flores para celebrar tu día</h3>
-            <p>Vi en tu estado que era tu cumple, pregunté dónde podías recibir un detalle y te mandé la sorpresa.
-              Porque un día especial no podía pasar sin flores y bombones.</p>
-          </div>
-        </article>
-
-        <!-- Item 2: Dulces Fit -->
-        <article class="gallery-card">
-          <div class="image-wrapper">
-            <img src="IMG-20261015-WA0087.jpg"
-              alt="Caja de dulces fit con lazo rosa y dedicatoria Con amor Para Mercedes" loading="lazy">
-            <div class="image-overlay">
-              <span class="overlay-badge">15 de Octubre</span>
-              <button class="zoom-btn" data-img="IMG-20261015-WA0087.jpg"
-                data-caption="Cuando no hay tiempo para una buena merienda, el auxilio dulce llega directo a tu puerta.">Ver
-                Completa</button>
-            </div>
-          </div>
-          <div class="card-caption">
-            <h3>Un Antojo Bien Merecido</h3>
-            <p>Para esos días largos donde hace falta frenar un ratito y recargar energías con algo rico, dulce y sin
-              culpa.</p>
-          </div>
-        </article>
-
-        <!-- Item 3: Pasión Automotriz / Drift -->
-        <article class="gallery-card">
-          <div class="image-wrapper">
-            <video autoplay muted loop playsinline poster="IMG-20260917-WA0022.jpg">
-              <source src="VID-20260912-WA0130.mp4" type="video/mp4">
-            </video>
-            <div class="image-overlay">
-              <span class="overlay-badge">Drift & Adrenalina</span>
-              <button class="zoom-btn" data-video="VID-20260912-WA0130.mp4"
-                data-caption="Adrenalina pura sobre ruedas. Un gusto por los motores que definitivamente suma mil puntos.">Ver
-                Video ▶</button>
-            </div>
-          </div>
-          <div class="card-caption">
-            <h3>Puro Drift & Velocidad</h3>
-            <p>Porque detrás de tanta calma y elegancia, también hay una mujer apasionada por los buenos autos y la
-              adrenalina. Un gusto tremendo que no cualquiera tiene.</p>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
     <!-- Section: Botón de Rescate / Relax Interactivo -->
     <section class="section" id="botonde-rescate">
       <div class="rescue-box">
@@ -408,6 +339,46 @@
                   d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" />
               </svg>
               <span>Decime qué te pareció 😉</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Mini-Test Interactivo -->
+    <section class="section test-section" id="test">
+      <div class="section-header">
+        <span class="section-tag">Mini-Test con Humor</span>
+        <h2 class="section-title">¿Qué tan <span class="serif-italic">"aburrida"</span> sos?</h2>
+        <p class="section-subtitle">Respondé con sinceridad para calcular tu diagnóstico oficial según la ciencia.</p>
+      </div>
+
+      <div class="test-wrapper">
+        <div class="test-progress-header">
+          <span class="test-step-label" id="testStepLabel">Pregunta 1 de 3</span>
+          <div class="test-progress-bar">
+            <div class="test-progress-fill" id="testProgressFill"></div>
+          </div>
+        </div>
+
+        <div class="test-card" id="testCard">
+          <h3 class="test-question" id="testQuestion">Cargando pregunta...</h3>
+          <div class="test-options" id="testOptions"></div>
+        </div>
+
+        <div class="test-result-card hidden" id="testResultCard">
+          <div class="result-badge">Diagnóstico Científico Final</div>
+          <div class="result-score">0% Aburrida · 100% Cautivadora 👑</div>
+          <p class="result-text">
+            Se comprobó lo que ya sospechábamos: tener prioridades claras, trabajar con disciplina, cuidar a tu hijo como una reina y preferir la tranquilidad de tu casa no es ser aburrida... es ser una mujer inteligente, elegante y con un encanto único.
+          </p>
+          <div class="result-actions">
+            <button id="retryTestBtn" class="btn btn-secondary">
+              <span>↻ Repetir el test</span>
+            </button>
+            <a href="https://wa.me/595986550235?text=Hola%20Denis!%20Hice%20el%20test%20y%20me%20dio%20100%25%20cautivadora%20%F0%9F%98%82%F0%9F%91%91"
+              target="_blank" class="btn btn-whatsapp-share">
+              <span>Compartir resultado 😉</span>
             </a>
           </div>
         </div>

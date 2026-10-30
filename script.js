@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 8. Status Phrases for WhatsApp
   initStatusGrid();
+
+  // 9. Interactive Mini-Test: ¿Qué tan aburrida sos?
+  initMiniTest();
 });
 
 /* ==========================================================================
@@ -725,5 +728,114 @@ function initStatusGrid() {
   });
 
   renderStatusCards('all');
+}
+
+/* ==========================================================================
+   9. MINI-TEST INTERACTIVO: ¿Qué tan aburrida sos?
+   ========================================================================== */
+function initMiniTest() {
+  const testCard = document.getElementById('testCard');
+  const testQuestion = document.getElementById('testQuestion');
+  const testOptions = document.getElementById('testOptions');
+  const testStepLabel = document.getElementById('testStepLabel');
+  const testProgressFill = document.getElementById('testProgressFill');
+  const testResultCard = document.getElementById('testResultCard');
+  const retryBtn = document.getElementById('retryTestBtn');
+
+  if (!testCard || !testQuestion || !testOptions) return;
+
+  const testQuestions = [
+    {
+      question: "¿Tu plan ideal de viernes a la noche después de una semana pesada?",
+      options: [
+        "Ducha caliente, algo rico para merendar/cenar y a la cama temprano 🌙",
+        "Salir a quemar la noche aunque el lunes no me pueda levantar 💃",
+        "Dormir 12 horas seguidas sin que nadie me hable 😴"
+      ]
+    },
+    {
+      question: "¿Tu relación con el gimnasio y los gustitos dulces?",
+      options: [
+        "Entreno duro, pero si hay postre rico me lo como con ganas y cero culpas 🍰",
+        "Dieta estricta de lechuga y agua 24/7 sin excepciones 🥗",
+        "El único ejercicio que hago es esquivar responsabilidades 🏃‍♀️"
+      ]
+    },
+    {
+      question: "¿Tu verdadera definición de tener paz mental?",
+      options: [
+        "Estar tranquila en mi casa, sin dramas y disfrutando de mi espacio 🖤",
+        "Estar rodeada de mil personas todo el tiempo 🗣️",
+        "Que mi celular no suene nunca más los fines de semana 📴"
+      ]
+    }
+  ];
+
+  let currentStep = 0;
+
+  function renderQuestion(index) {
+    testCard.style.opacity = '0';
+    testCard.style.transform = 'translateY(6px)';
+
+    setTimeout(() => {
+      const q = testQuestions[index];
+      if (testStepLabel) testStepLabel.textContent = `Pregunta ${index + 1} de ${testQuestions.length}`;
+      if (testProgressFill) testProgressFill.style.width = `${((index + 1) / testQuestions.length) * 100}%`;
+      testQuestion.textContent = q.question;
+      testOptions.innerHTML = '';
+
+      q.options.forEach((optText) => {
+        const btn = document.createElement('button');
+        btn.className = 'test-option-btn';
+        btn.type = 'button';
+        btn.innerHTML = `
+          <span class="test-option-dot"></span>
+          <span>${optText}</span>
+        `;
+
+        btn.addEventListener('click', () => {
+          const rect = btn.getBoundingClientRect();
+          if (window.burstPetals) {
+            window.burstPetals(rect.left + rect.width / 2, rect.top + rect.height / 2);
+          }
+
+          if (currentStep < testQuestions.length - 1) {
+            currentStep++;
+            renderQuestion(currentStep);
+          } else {
+            showResult();
+          }
+        });
+
+        testOptions.appendChild(btn);
+      });
+
+      testCard.style.opacity = '1';
+      testCard.style.transform = 'translateY(0)';
+    }, 150);
+  }
+
+  function showResult() {
+    testCard.classList.add('hidden');
+    if (testStepLabel) testStepLabel.textContent = 'Diagnóstico Final Completado';
+    if (testProgressFill) testProgressFill.style.width = '100%';
+    if (testResultCard) testResultCard.classList.remove('hidden');
+
+    if (testResultCard && window.burstPetals) {
+      const rect = testResultCard.getBoundingClientRect();
+      window.burstPetals(rect.left + rect.width / 2, rect.top + rect.height / 2);
+    }
+  }
+
+  if (retryBtn) {
+    retryBtn.addEventListener('click', () => {
+      currentStep = 0;
+      if (testResultCard) testResultCard.classList.add('hidden');
+      testCard.classList.remove('hidden');
+      renderQuestion(0);
+    });
+  }
+
+  renderQuestion(0);
 }
 
