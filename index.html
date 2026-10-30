@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The Mercedes Edition · Para Mercedes Franco</title>
+  <meta name="description" content="Un rincón exclusivo para alguien cautivadora que nunca pasa desapercibida.">
+
+  <!-- Open Graph / WhatsApp Preview Meta Tags -->
+  <meta name="theme-color" content="#070709">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Mercedes Edition">
+  <meta property="og:title" content="The Mercedes Edition · Para Mercedes Franco">
+  <meta property="og:description" content="Un rincón exclusivo para alguien cautivadora que nunca pasa desapercibida.">
+  <meta property="og:image" content="IMAGE-OG.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="682">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Mercedes Edition · Para Mercedes Franco">
+  <meta name="twitter:description" content="Un rincón exclusivo para alguien cautivadora que nunca pasa desapercibida.">
+  <meta name="twitter:image" content="IMAGE-OG.jpg">
+
+  <link rel="icon" type="image/jpeg" href="IMAGE-OG.jpg">
+
+  <!-- Google Fonts: Editorial Serif + Modern Clean Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="theme-dark">
+  <!-- Interactive Stardust & Petals Canvas -->
+  <canvas id="ambientCanvas"></canvas>
+
+  <!-- Luxury Minimal Audio Switch (Top Right, Non-sticky) -->
+  <button id="toggleAudioBtn" class="luxury-audio-switch" aria-label="Música de ambiente" type="button">
+    <span class="eq-icon" aria-hidden="true">
+      <span class="eq-bar bar-1"></span>
+      <span class="eq-bar bar-2"></span>
+      <span class="eq-bar bar-3"></span>
+    </span>
+    <span id="audioBtnText" class="audio-label">Música</span>
+  </button>
+
+  <!-- Hero Section -->
+  <header class="hero-section" id="hero">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span>The Mercedes Edition</span>
+    </div>
+
+    <h1 class="hero-title">
+      Lo que vos llamás <span class="highlight-italic">"aburrida"</span>,<br>
+      yo lo llamo <span class="gradient-text">cautivadora</span>.
+    </h1>
+
+    <p class="hero-desc">
+      Un rincón interactivo pensado especialmente para vos. Porque hay personas que desde que aparecen, iluminan una
+      manera diferente y dan ganas de conocerlas cada vez más.
+    </p>
+
+    <div class="hero-tags">
+      <span class="tag">🖤 Color Favorito: Negro</span>
+      <span class="tag">💫 Cautivadora sin intentarlo</span>
+      <span class="tag">🌸 Amante de las Flores</span>
+      <span class="tag">🍰 Dulces Fit Lover</span>
+      <span class="tag">✨ Espíritu Imparable</span>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#mitos" class="btn btn-primary" id="startExploreBtn">
+        <span>Explorar tu Espacio</span>
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section: Mitos vs Realidad -->
+    <section class="section" id="mitos">
+      <div class="section-header">
+        <span class="section-tag">Análisis Honesto</span>
+        <h2 class="section-title">Desmontando la teoría del <span class="serif-italic">"Re aburrida soy"</span></h2>
+        <p class="section-subtitle">Hacé clic en cada tarjeta para descubrir la diferencia entre lo que pensás y lo que
+          realmente transmitís.</p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Card 1 -->
+        <div class="flip-card" tabindex="0" role="button" aria-label="Tarjeta interactiva sobre el descanso">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="card-icon">🌙</div>
+              <span class="card-badge">Mito #1</span>
+              <h3>"Mi hobby últimamente es descansar y estar sola..."</h3>
+              <p class="card-hint">Tocá para ver la verdad ↻</p>
+            </div>
+            <div class="flip-card-back">
+              <div class="card-icon">⚡</div>
+              <span class="card-badge highlight">La Realidad</span>
+              <h3>Sos una mujer todo terreno</h3>
+              <p>Manejás dos trabajos con una disciplina admirable, sostenés responsabilidades gigantes y das el 100%
+                cada día. Descansar y tener paz no es aburrido: es el merecido descanso de una reina.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flip-card" tabindex="0" role="button" aria-label="Tarjeta interactiva sobre la belleza">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="card-icon">✨</div>
+              <span class="card-badge">Mito #2</span>
+              <h3>"Ya ni me hago las uñas, me siento muy cambiada..."</h3>
+              <p class="card-hint">Tocá para ver la verdad ↻</p>
+            </div>
+            <div class="flip-card-back">
+              <div class="card-icon">👑</div>
+              <span class="card-badge highlight">La Realidad</span>
+              <h3>Tu belleza es natural y no se apaga</h3>
+              <p>Aunque andes a mil por hora o cansada por la rutina, tenés una vibra linda y coqueta que jamás pasa
+                desapercibida. El brillo propio no se pierde por unas semanas ajetreadas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flip-card" tabindex="0" role="button" aria-label="Tarjeta interactiva sobre las metas">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="card-icon">🕊️</div>
+              <span class="card-badge">Mito #3</span>
+              <h3>"No tengo nada interesante que contar..."</h3>
+              <p class="card-hint">Tocá para ver la verdad ↻</p>
+            </div>
+            <div class="flip-card-back">
+              <div class="card-icon">🔥</div>
+              <span class="card-badge highlight">La Realidad</span>
+              <h3>Tenés coraje de sobra</h3>
+              <p>Sos una mamá ejemplar que enseña y saca 5 con su hijo, amás las flores, disfrutás de las cosas simples
+                y tenés la valentía de construir tu propio destino sin depender de nadie. De aburrida, ni un poquito.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Rincón de Frases & Reflexiones -->
+    <section class="section dark-accent" id="reflexiones">
+      <div class="section-header">
+        <span class="section-tag">Inspiración Diaria</span>
+        <h2 class="section-title">Frases & <span class="serif-italic">Reflexiones</span></h2>
+        <p class="section-subtitle">Un rincón de calma, inspiración y buenas energías para acompañar tu día.</p>
+      </div>
+
+      <div class="quote-container">
+        <div class="quote-card" id="quoteCard">
+          <div class="quote-header">
+            <span class="quote-category" id="quoteCategory">✨ Para el Alma</span>
+            <span class="quote-counter" id="quoteCounter">1 / 10</span>
+            <button id="likeQuoteBtn" class="heart-btn" aria-label="Guardar frase favorita">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </button>
+          </div>
+
+          <blockquote class="quote-body" id="quoteText">
+            "No te sientas culpable por estar cansada. Has estado siendo fuerte por mucho tiempo. Date permiso de parar,
+            respirar y recordar quién eres."
+          </blockquote>
+
+          <div class="quote-footer">
+            <span class="quote-star">✦</span>
+          </div>
+        </div>
+
+        <div class="quote-actions">
+          <button id="prevQuoteBtn" class="btn btn-icon" aria-label="Frase anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button id="randomQuoteBtn" class="btn btn-gold">
+            <span>🎲 Siguiente Frase</span>
+          </button>
+          <button id="nextQuoteBtn" class="btn btn-icon" aria-label="Siguiente frase">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Frases para tus Estados -->
+    <section class="section" id="estados">
+      <div class="section-header">
+        <span class="section-tag">Para Compartir</span>
+        <h2 class="section-title">Frases para tus <span class="serif-italic">Estados</span></h2>
+        <p class="section-subtitle">Palabras con luz para reflexionar, guardar o compartir cuando quieras.</p>
+      </div>
+
+      <!-- Filter Categories -->
+      <div class="status-categories">
+        <button class="status-filter active" data-category="all">Todas</button>
+        <button class="status-filter" data-category="fe">Fe & Gratitud 🙏</button>
+        <button class="status-filter" data-category="actitud">Actitud & Fuerza</button>
+        <button class="status-filter" data-category="relax">Paz & Desconexión</button>
+        <button class="status-filter" data-category="humor">Humor & Realidad</button>
+        <button class="status-filter" data-category="metas">Nuevos Caminos</button>
+      </div>
+
+      <!-- Grid of Status Cards -->
+      <div class="status-grid" id="statusGrid"></div>
+    </section>
+
+    <!-- Section: Galería de Momentos & Recuerdos -->
+    <section class="section" id="momentos">
+      <div class="section-header">
+        <span class="section-tag">Cápsula del Tiempo</span>
+        <h2 class="section-title">Momentos que <span class="serif-italic">sacaron sonrisas</span></h2>
+        <p class="section-subtitle">Pequeñas historias, grandes detalles y recuerdos de estos meses.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Item 1: Flores Cumpleaños -->
+        <article class="gallery-card">
+          <div class="image-wrapper">
+            <img src="IMG-20260909-WA0004.jpg" alt="Ramo de rosas de cumpleaños con Ferrero Rocher" loading="lazy">
+            <div class="image-overlay">
+              <span class="overlay-badge">09 de Septiembre</span>
+              <button class="zoom-btn" data-img="IMG-20260909-WA0004.jpg"
+                data-caption="Vi en tu estado que era tu cumple y te mandé este detalle sorpresa. Porque te merecías flores y bombones ese día.">Ver
+                Completa</button>
+            </div>
+          </div>
+          <div class="card-caption">
+            <h3>Flores para celebrar tu día</h3>
+            <p>Vi en tu estado que era tu cumple, pregunté dónde podías recibir un detalle y te mandé la sorpresa.
+              Porque un día especial no podía pasar sin flores y bombones.</p>
+          </div>
+        </article>
+
+        <!-- Item 2: Dulces Fit -->
+        <article class="gallery-card">
+          <div class="image-wrapper">
+            <img src="IMG-20261015-WA0087.jpg"
+              alt="Caja de dulces fit con lazo rosa y dedicatoria Con amor Para Mercedes" loading="lazy">
+            <div class="image-overlay">
+              <span class="overlay-badge">15 de Octubre</span>
+              <button class="zoom-btn" data-img="IMG-20261015-WA0087.jpg"
+                data-caption="Cuando no hay tiempo para una buena merienda, el auxilio dulce llega directo a tu puerta.">Ver
+                Completa</button>
+            </div>
+          </div>
+          <div class="card-caption">
+            <h3>Un Antojo Bien Merecido</h3>
+            <p>Para esos días largos donde hace falta frenar un ratito y recargar energías con algo rico, dulce y sin
+              culpa.</p>
+          </div>
+        </article>
+
+        <!-- Item 3: Pasión Automotriz / Drift -->
+        <article class="gallery-card">
+          <div class="image-wrapper">
+            <video autoplay muted loop playsinline poster="IMG-20260917-WA0022.jpg">
+              <source src="VID-20260912-WA0130.mp4" type="video/mp4">
+            </video>
+            <div class="image-overlay">
+              <span class="overlay-badge">Drift & Adrenalina</span>
+              <button class="zoom-btn" data-video="VID-20260912-WA0130.mp4"
+                data-caption="Adrenalina pura sobre ruedas. Un gusto por los motores que definitivamente suma mil puntos.">Ver
+                Video ▶</button>
+            </div>
+          </div>
+          <div class="card-caption">
+            <h3>Puro Drift & Velocidad</h3>
+            <p>Porque detrás de tanta calma y elegancia, también hay una mujer apasionada por los buenos autos y la
+              adrenalina. Un gusto tremendo que no cualquiera tiene.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Section: Botón de Rescate / Relax Interactivo -->
+    <section class="section" id="botonde-rescate">
+      <div class="rescue-box">
+        <div class="rescue-glow"></div>
+        <div class="rescue-content">
+          <span class="rescue-pill">Modo Desconexión Inmediata</span>
+          <h2>¿Día pesado en el trabajo?</h2>
+          <p>Cuando sientas que el mundo va muy rápido o que estás cansada, presioná este botón. Activará una sorpresa
+            diseñada para arrancarte una sonrisa.</p>
+
+          <button id="rescueActionBtn" class="btn btn-luxury">
+            <span class="btn-text">Presioná para un Mimo Virtual 🖤</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Mood Booster Modal / Drawer -->
+        <div class="voucher-display hidden" id="voucherDisplay">
+          <div class="voucher-card">
+            <div class="voucher-stamp">VÁLIDO 100%</div>
+            <div class="voucher-icon" id="voucherIcon">🎁</div>
+            <h4 id="voucherTitle">Vale por tu Postre Favorito</h4>
+            <p id="voucherDesc">Canjeable en cualquier momento en que necesites recargar energías sin culpa.</p>
+            <div class="voucher-id">CÓDIGO: MERCEDES-FRANCO</div>
+            <a id="claimVoucherBtn"
+              href="https://wa.me/595986550235?text=Hola%20Denis!%20Acabo%20de%20desbloquear%20este%20vale%20en%20la%20p%C3%A1gina%20%F0%9F%8E%81%20%F0%9F%98%89"
+              target="_blank" class="btn btn-voucher-wa">
+              <span>Canjear con Denis por WhatsApp 💬</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: El Gran Viaje -->
+    <section class="section countdown-section" id="viaje">
+      <div class="countdown-card">
+        <div class="countdown-header">
+          <span class="flag-icon">✈️</span>
+          <span class="countdown-tag">Nuevos Horizontes</span>
+          <h2>El Gran Viaje · 06 de Diciembre</h2>
+          <p>Un nuevo capítulo por tus metas, tu negocio y tu futuro. Que nunca olvides lo valiente que sos por
+            perseguir lo que querés con tanta determinación.</p>
+        </div>
+
+        <div class="timer-grid">
+          <div class="timer-box">
+            <span class="timer-num" id="daysNum">00</span>
+            <span class="timer-label">Días</span>
+          </div>
+          <div class="timer-box">
+            <span class="timer-num" id="hoursNum">00</span>
+            <span class="timer-label">Horas</span>
+          </div>
+          <div class="timer-box">
+            <span class="timer-num" id="minsNum">00</span>
+            <span class="timer-label">Minutos</span>
+          </div>
+          <div class="timer-box">
+            <span class="timer-num" id="secsNum">00</span>
+            <span class="timer-label">Segundos</span>
+          </div>
+        </div>
+
+        <div class="countdown-wishes">
+          <p>🌟 <em>"Que cada kilómetro recorrido te acerque más a la vida que soñás, y que sepas que acá siempre habrá
+              alguien admirando tu fortaleza."</em></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: La Carta / Nota de Denis -->
+    <section class="section letter-section" id="carta">
+      <div class="letter-paper">
+        <div class="letter-stamp">
+          <span>CON CARIÑO</span>
+        </div>
+        <div class="letter-body">
+          <p class="letter-salutation">Hola Mercedes,</p>
+          <p>
+            Hoy me decías que te sentías <em>"re aburrida"</em>, que tu hobby era descansar y que sentías que habías
+            cambiado con el tiempo.
+          </p>
+          <p>
+            Quise armarte esto para mostrarte cómo se ve desde afuera: sos una mujer guapa, que trabaja un montón, que
+            cuida a su hijo como nadie y que encima tiene una vibra única. Lo de linda no se discute jamás.
+          </p>
+          <p>
+            Y siendo sincero: desde que empezamos a hablar me llamaste la atención. Me gusta tu forma de ser, cómo te
+            reís y esa chispa que tenés, por más que andes a las corridas con el trabajo.
+          </p>
+          <p>
+            Y antes de que viajes, tenemos que hacernos un tiempito para vernos, comer algo rico o tomar un vino
+            tranqui.
+          </p>
+          <p>
+            Ojalá te guste este detalle y te saque una sonrisa cada vez que lo mires.
+          </p>
+
+          <div class="letter-signature">
+            <span class="sig-name">Denis Ricardo</span>
+          </div>
+
+          <div class="letter-action">
+            <a href="https://wa.me/595986550235?text=Hola%20Denis!%20Acabo%20de%20ver%20la%20p%C3%A1gina...%20me%20encant%C3%B3%20el%20detalle%20%F0%9F%96%A4"
+              target="_blank" class="btn btn-whatsapp-letter">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="wa-icon">
+                <path
+                  d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" />
+              </svg>
+              <span>Decime qué te pareció 😉</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Hecho con código, detalles y admiración sincera para <strong>Mercedes Franco</strong>.</p>
+    <p class="footer-sub">El negro nunca pasa de moda, y vos tampoco.</p>
+  </footer>
+
+  <!-- Lightbox Modal for Full Image Zoom -->
+  <div class="lightbox hidden" id="lightbox">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar vista">&times;</button>
+      <img id="lightboxImg" src="" alt="">
+      <video id="lightboxVideo" controls class="hidden"></video>
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast hidden" id="toast">
+    <span id="toastMsg">Copiado al portapapeles</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
